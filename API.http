@@ -1,0 +1,34 @@
+@base_address = http://localhost:8000
+
+### Получить список всех игр
+GET {{base_address}}/games
+
+### Создать новую игру
+POST {{base_address}}/games
+Content-Type: application/json
+
+{
+  "id": 1,
+  "bet_amount": 100,
+  "title": "Game 1",
+  "round_number": 1,
+  "users_count": 2
+}
+
+### Создать новую игру
+POST {{base_address}}/games
+Content-Type: application/json
+
+{
+  "id": 2,
+  "bet_amount": 200,
+  "title": "Game 2",
+  "round_number": 2,
+  "users_count": 3
+}
+
+### Получить информацию о игре по ID
+GET {{base_address}}/games/1
+
+### Получить информацию о игре по ID
+GET {{base_address}}/games/2
